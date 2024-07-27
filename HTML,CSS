@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+<style>
+body{
+  padding: 0px;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.header{
+  background-color:green;
+  text-align: center;
+  transform: uppercase;
+  padding: 10px;
+}
+
+.titel{
+  text-align: center;
+  font-size: 20px;
+  color: red;
+  padding: 80px;
+ 
+}
+.footer{
+  background-color: #333;
+  text-align:center;
+  color:white;
+  padding: 10px;
+}
+</style>
+
+<!--here the html body start-->
+  </head>
+  <body>
+    <header class="header">
+      <h1>Header</h1>
+    </header>
+    
+    <main class="titel">
+      
+      <h1 id="main-title"></h1>
+      <p id="main-content"></p>
+      
+    </main>
+    
+    <footer class="footer">
+      <p> Footer</p>
+    </footer>
+
+<!--here th javascript start-->
+
+      <script src="script.js"></script>
+<script>
+
+document.addEventListener("DOMContentLoaded", ()=> {
+    const data = {
+        "title": "Title",
+        "content": "This is json Object"
+    };
+
+    document.getElementById("main-title").innerHTML = data.title;
+    document.getElementById("main-content").innerHTML = data.content;
+});
+
+
+</script>
+  </body>
+</html>
